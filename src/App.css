@@ -77,24 +77,7 @@ html {
 	color: inherit;
 }
 
-.contentWrapper {
-	align-items: center;
-	border: 2px solid black;
-	border-radius: 15px;
-	padding: 5px;
-	transition: all 0.3s ease;
-	display: inline-flex;
-}
 
-.listenNowLink:hover .contentWrapper {
-	border: 2px solid black;
-	background-color: #74ee15;
-}
-
-.contentWrapper span,
-.contentWrapper img {
-	margin-right: 4px;
-}
 
 
 .listenNowContainer span,
@@ -156,4 +139,49 @@ html {
 
 .pagination button:hover:not(:disabled) {
 	background-color: #0056b3;
+}
+
+.metamaskButton {
+    padding: 10px 15px;
+    background-color: #f6851b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.contentWrapper {
+	align-items: center;
+	border: 2px solid black;
+	border-radius: 15px;
+	padding: 5px;
+	transition: all 0.3s ease;
+	display: inline-flex;
+}
+
+.listenNowLink:hover .contentWrapper {
+	border: 2px solid black;
+	background-color: #74ee15;
+}
+
+.contentWrapper span,
+.contentWrapper img {
+	margin-right: 4px;
+}
+.vote-button {
+    align-items: center;
+    border: 2px solid black;
+	background-color: white;
+    border-radius: 15px;
+    padding: 2px 10px; 
+    transition: all 0.3s ease;
+    display: inline-block; 
+    font-size: 13px;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.vote-button:hover {
+    background-color: #74ee15;
 }

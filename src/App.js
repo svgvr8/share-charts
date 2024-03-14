@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import MetaMaskSigner from './MetaMaskSigner';
 
 import './App.css';
 
@@ -55,23 +56,27 @@ function ChartList({ items }) {
 	return (
 		<div className="chartList">
 			{items.map(([address, details], index) => (
+
 				<div key={index} className="chartItem">
-					<div className="chartPosition">{index + 1}</div>
+					<div className="chartPosition">{index + 1}					</div>
 					<div className="chartDetails">
-						<div className="chartTitle">{details.metaName}</div>
+						<div className="chartTitle">{details.metaName}       < MetaMaskSigner voteFor={details.metaName} /></div>
 						<div className="transactionCount">Total Transactions: {details.count}</div>
 						<a href={details.url} target="_blank" rel="noopener noreferrer" className="listenNowLink">
 							<div className="contentWrapper">
 								<span>Listen now on </span>
 								<img src="https://app.share.formless.xyz/formless-mark-black.svg" alt="Formless Logo" style={{ width: '50px', height: '50px' }} />
-							</div>
-						</a>
-					</div>
-				</div>
-			))}
-		</div>
+							</div>	</a>
 
+					</div>
+
+
+				</div>
+			))
+			}
+		</div >
 	);
 }
+
 
 export default App;
