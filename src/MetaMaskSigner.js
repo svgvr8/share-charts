@@ -19,7 +19,7 @@ function MetaMaskSigner({ voteFor }) {
 			console.log(`Vote by: ${signerAddress} for: ${voteFor}`);
 
 			// Define the server endpoint
-			const serverEndpoint = 'https://0x8626f6940e2eb28930efb4cef49b2d1f2c9c1199.replit.app/';
+			const serverEndpoint = 'https://4540a0b4-6bbe-4467-8653-7c8a40bfc318-00-15e0qxt8pczux.worf.replit.dev/vote';
 
 			fetch(serverEndpoint, {
 				method: 'POST',
