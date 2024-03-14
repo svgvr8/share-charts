@@ -5,7 +5,7 @@ import './App.css';
 function MetaMaskSigner({ voteFor }) {
 	const handleSign = async () => {
 		if (!window.ethereum) {
-			console.log('Crypto Wallet is not installed! Install Coinbase or Metamask');
+			alert('Crypto Wallet is not installed! Install Coinbase or Metamask');
 			return;
 		}
 
