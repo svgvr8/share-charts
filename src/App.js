@@ -14,7 +14,6 @@ function App() {
 	const [maticPrice, setMaticPrice] = useState(null);
 
 	useEffect(() => {
-		// Fetch Matic price from Polygonscan API
 		fetch('https://api.polygonscan.com/api?module=stats&action=maticprice&apikey=YourApiKeyToken')
 			.then(response => response.json())
 			.then(data => {
@@ -60,8 +59,15 @@ function App() {
 		<div className="App">
 
 			<Navbar />
-			{maticPrice && <div>$MATIC: ${parseFloat(maticPrice).toFixed(2)}</div>}
 
+			<div className="earningsInfo">
+				<div>TOP EARNING <a href="https://app.share.formless.xyz/assets/polygon/0xc77ea93cc084c2e9140e1f3dcdc8bfba3a9d3614" className="neonLink">SONG</a> = 2275 MATIC </div>
+
+				{maticPrice && <div>1 MATIC = ${parseFloat(maticPrice).toFixed(2)}</div>}
+				<div>SHARE REVENUE: 41,007 MATIC</div>
+
+
+			</div>
 			<ChartList items={currentData} />
 
 			<Footer />
@@ -77,9 +83,12 @@ function ChartList({ items }) {
 				<div key={index} className="chartItem">
 					<div className="chartPosition">{index + 1}					</div>
 					<div className="chartDetails">
-						<div className="chartTitle">{details.metaName}       < MetaMaskSigner voteFor={details.metaName} /></div>
-						<div className="transactionCount">Total Transactions: {details.count}</div>
-						<a href={details.url} target="_blank" rel="noopener noreferrer" className="listenNowLink">
+						<div className="chartTitle">{details.title}    < MetaMaskSigner voteFor={details.title} />  </div>
+
+						<div className="transactionrepeats">{details.repeats} TX + {details.revenue.toFixed(1)} MATIC </div>
+						<div class="spacer"></div>
+
+						<a href={details.share} target="_blank" rel="noopener noreferrer" className="listenNowLink">
 							<div className="contentWrapper">
 								<span>Listen now on </span>
 								<img src="https://app.share.formless.xyz/formless-mark-black.svg" alt="Formless Logo" style={{ width: '50px', height: '50px' }} />

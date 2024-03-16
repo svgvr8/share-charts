@@ -26,6 +26,7 @@ const Navbar = ({ isScrolled }) => {
 			</div>
 			<div className="nav-items">
 				<h2><a href="https://formless.xyz" className="nav-item" target="_blank" rel="noopener noreferrer">SHARE PROTOCOL LEADERBOARD</a></h2>
+
 			</div>
 
 			<div className="nav-dropdown">

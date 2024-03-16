@@ -185,3 +185,45 @@ html {
 .vote-button:hover {
     background-color: #74ee15;
 }
+
+.spacer {
+    height: 10px;
+  }
+
+  .earningsInfo {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0; 
+    border-bottom: 1px solid #ffffff; 
+    font-family: 'Courier', sans-serif;
+}
+
+.earningsInfo > div {
+    margin: 0 10px; 
+}
+
+.neonLink {
+    color: rgb(0, 0, 0); /* Neon Green, adjust color as needed */
+    text-decoration: none; /* Removes underline */
+    font-weight: bold; /* Optional: makes the text bold */
+    
+    /* text-shadow:
+        0 0 5px #0f0,
+        0 0 10px #0f0,
+        0 0 20px #0f0,
+        0 0 40px #0f0,
+        0 0 80px #0f0; */
+}
+
+.neonLink:hover {
+    color: rgb(0, 0, 0); 
+    text-shadow:
+        0 0 5px rgb(240, 209, 242),
+        0 0 10px rgb(240, 209, 242),
+        0 0 20px rgb(240, 209, 242),
+        0 0 40px rgb(240, 209, 242),
+        0 0 80px rgb(240, 209, 242);
+}
+

@@ -40,7 +40,7 @@ function MetaMaskSigner({ voteFor }) {
 	};
 
 	return (
-		<button onClick={handleSign} className='vote-button'>Vote</button>
+		<button onClick={handleSign} className='vote-button'>VOTE</button>
 	);
 }
 
