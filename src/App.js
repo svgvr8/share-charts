@@ -64,7 +64,7 @@ function App() {
 				<div>TOP EARNING <a href="https://app.share.formless.xyz/assets/polygon/0xc77ea93cc084c2e9140e1f3dcdc8bfba3a9d3614" className="neonLink">SONG</a> = 2275 MATIC </div>
 
 				{maticPrice && <div>1 MATIC = ${parseFloat(maticPrice).toFixed(2)}</div>}
-				<div>SHARE REVENUE: 41,007 MATIC</div>
+				<div>SHARE REVENUE = 41,007 MATIC</div>
 
 
 			</div>
@@ -85,7 +85,7 @@ function ChartList({ items }) {
 					<div className="chartDetails">
 						<div className="chartTitle">{details.title}    < MetaMaskSigner voteFor={details.title} />  </div>
 
-						<div className="transactionrepeats">{details.repeats} TX + {details.revenue.toFixed(1)} MATIC </div>
+						<div className="transactionrepeats">{details.repeats} TX + {details.revenue.toFixed(1)} MATIC REVENUE</div>
 						<div class="spacer"></div>
 
 						<a href={details.share} target="_blank" rel="noopener noreferrer" className="listenNowLink">
