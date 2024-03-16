@@ -11,7 +11,21 @@ function App() {
 	const [data, setData] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [isLoading, setIsLoading] = useState(true);
+	const [maticPrice, setMaticPrice] = useState(null);
 
+	useEffect(() => {
+		// Fetch Matic price from Polygonscan API
+		fetch('https://api.polygonscan.com/api?module=stats&action=maticprice&apikey=YourApiKeyToken')
+			.then(response => response.json())
+			.then(data => {
+				if (data.status === "1") {
+					setMaticPrice(data.result.maticusd);
+				} else {
+					console.error('Error fetching Matic price:', data.message);
+				}
+			})
+			.catch(error => console.error('Error fetching Matic price:', error));
+	}, []);
 	useEffect(() => {
 		fetch('/api.json')
 			.then(response => response.json())
@@ -44,9 +58,12 @@ function App() {
 
 	return (
 		<div className="App">
+
 			<Navbar />
+			{maticPrice && <div>$MATIC: ${parseFloat(maticPrice).toFixed(2)}</div>}
 
 			<ChartList items={currentData} />
+
 			<Footer />
 		</div>
 	);

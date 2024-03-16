@@ -6,6 +6,7 @@ const Navbar = ({ isScrolled }) => {
 		{ logo: 'https://upload.wikimedia.org/wikipedia/commons/8/8c/Polygon_Blockchain_Matic_Logo.svg' },
 		{ logo: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Ethereum_logo_2014.svg' },
 		{ logo: 'https://optimistic.etherscan.io/images/svg/brands/main.svg' },
+
 	];
 	const [selectedOption, setSelectedOption] = useState(options[0]);
 	const [isOpen, setIsOpen] = useState(false);
@@ -24,8 +25,9 @@ const Navbar = ({ isScrolled }) => {
 				<img src="https://app.share.formless.xyz/formless-mark-white.svg" alt="Formless Mark White" />
 			</div>
 			<div className="nav-items">
-				<h2><a href="https://formless.xyz" className="nav-item" target="_blank" rel="noopener noreferrer">TOP CONTRACTS ON SHARE PROTOCOL BY FORMLESS.XYZ</a></h2>
+				<h2><a href="https://formless.xyz" className="nav-item" target="_blank" rel="noopener noreferrer">SHARE PROTOCOL LEADERBOARD</a></h2>
 			</div>
+
 			<div className="nav-dropdown">
 				<div className="custom-dropdown" onClick={toggleDropdown}>
 					<div className="dropdown-selected">
