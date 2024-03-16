@@ -25,7 +25,7 @@ const Navbar = ({ isScrolled }) => {
 				<img src="https://app.share.formless.xyz/formless-mark-white.svg" alt="Formless Mark White" />
 			</div>
 			<div className="nav-items">
-				<h2><a href="https://formless.xyz" className="nav-item" target="_blank" rel="noopener noreferrer">SHARE PROTOCOL LEADERBOARD</a></h2>
+				<h2><a href="https://app.share.formless.xyz/dashboard/create" className="nav-item" target="_blank" rel="noopener noreferrer">SHARE PROTOCOL LEADERBOARD</a></h2>
 
 			</div>
 
