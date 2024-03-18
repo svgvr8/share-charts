@@ -8,7 +8,7 @@ const Footer = () => {
 		fetch('/api.json')
 			.then(response => response.json())
 			.then(data => {
-				const artistNames = data.slice(0, 10).map(item => item[1].metaName);
+				const artistNames = data.slice(0, 10).map(item => item[1].title);
 				setTopArtists(artistNames);
 			})
 			.catch(error => console.error("Failed to load data:", error));
